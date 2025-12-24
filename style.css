@@ -4,8 +4,6 @@ html {
     cursor: url("img/cursor.png") 16 16, auto;
 }
 
-
-
                                 /*--------- Page layout ---------*/
 
 div{
@@ -14,16 +12,16 @@ div{
 }
 
 #menu_buttons_container{
-    width: 1000px;
-    height: 300px;
-    margin: 200px 350px;
+    width: 70%;
+    height: 30%;
+    margin: 10% 30%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
         "top-left top-right"
         "bottom-left bottom-right";
-    gap: 50px;
+    gap: 20%;
 }
 
 #menu_buttons_container div{

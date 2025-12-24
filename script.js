@@ -41,14 +41,15 @@ if (cookieAccepted === 'true'){
     cookieMessage.style.display = 'block';
 }
 
-    // Greetings depends on current time
 
 acceptCookie.addEventListener('click', () => {
     cookieMessage.style.display = 'none';
     localStorage.setItem('cookieAccepted', 'true');
 });
 
-let greetings = document.getElementById("time_greetings");
+    // Greetings depends on current time
+
+const greetings = document.getElementById("time_greetings");
 let date_time = new Date();
 let hours= date_time.getHours();
 
@@ -64,4 +65,4 @@ function greetings_by_time(){
     }
 }
 
-greetings_by_time()
+    greetings_by_time()
