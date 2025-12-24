@@ -15,24 +15,34 @@
         <button class="accept-cookie">Okè</button>
     </div>
 
-    <button id="theme-toggle"><Theme>Theme</Theme></button>
+    <header class="header">
+        <button class="nav_menu_button" id="nav_menu_button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
 
-    <h1><span id="time_greetings"></span> Welkom op mijn portfolio site !</h1>
+    <nav class="nav_menu" id="nav_menu">
+        <ul>
+            <li><button id="theme-toggle"><Theme>Theme</Theme></button></li>
+        </ul>
+        <ul>
+            <li><a class="hrefbut" href="Voorstel.html">Over mij</a></li>
+            <li><a class="hrefbut" href="Opleiding.html">About</a></li>
+            <li><a class="hrefbut" href="Talen.html">Talen</a></li>
+            <li><a class="hrefbut" href="Contact.html">Contact</a></li>
+        </ul>
+        <ul>
+            <li><a class="hrefbut" href="CookiesPolicy.html">Cookies Policy</a></li>
+            <li><a class="hrefbut" href="PrivacyPolicy.html">Privacy Policy</a></li>
+            <li><a class="hrefbut" href="Terms&Conditions.html">Terms & Conditions</a></li>
+        </ul>
+    </nav>
 
-    <div id="menu_buttons_container">
-    <div id="voorst"> <a class="hrefbut" href="Voorstel.html">Over mij</a></div>
-    <div id="opl">    <a class="hrefbut" href="Opleiding.html">Mijn ervaring</a></div>
-    <div id="talen">  <a class="hrefbut" href="Talen.html">Talen</a></div>
-    <div id="contact"><a class="hrefbut" href="Contact.html">Contact</a></div>
-    </div>
+    <h1><span id="time_greetings"></span> Welkom op mijn portfolio site!</h1>
 
-    <footer id="bottompanel">
-        <a class="botmpanel hrefbut"  href="CookiesPolicy.html">Cookies Policy</a>
-        <a class="botmpanel hrefbut"  href="PrivacyPolicy.html">Privacy Policy</a>
-        <a class="botmpanel hrefbut"  href="Terms&Conditions.html">Terms & Conditions</a>
-    </footer>
-
-    <p id="copyright">&copy; Daniil Lishankov, 2025</p>
+    <p id="copyright">&copy; Daniil Lishankov <span id="year_of_copyright"></span></p>
 
     <script src="script.js"></script>
 

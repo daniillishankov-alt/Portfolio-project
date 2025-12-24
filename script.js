@@ -52,6 +52,10 @@ acceptCookie.addEventListener('click', () => {
 const greetings = document.getElementById("time_greetings");
 let date_time = new Date();
 let hours= date_time.getHours();
+let year = date_time.getFullYear();
+const year_of_copyright = document.getElementById("year_of_copyright");
+
+    year_of_copyright.innerText = year;
 
 function greetings_by_time(){
     if(hours >= 6 && hours < 12){
@@ -65,4 +69,14 @@ function greetings_by_time(){
     }
 }
 
-    greetings_by_time()
+greetings_by_time()
+
+    // Navigation "burger" menu
+
+const nav_menu_button = document.getElementById('nav_menu_button');
+const nav_menu = document.getElementById('nav_menu');
+
+    nav_menu_button.addEventListener('click', () => {
+        nav_menu_button.classList.toggle('active');
+        nav_menu.classList.toggle('active');
+});
