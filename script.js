@@ -80,3 +80,39 @@ const nav_menu = document.getElementById('nav_menu');
         nav_menu_button.classList.toggle('active');
         nav_menu.classList.toggle('active');
 });
+
+                    //Birthday countdown
+
+const birth_day = 28;
+const birth_month = 1;
+const birthday_timer = document.getElementById("birthday_timer");
+
+function updateBDCountdown(){
+    let currentDate = new Date();
+    let birthDayDate = new Date(
+        currentDate.getFullYear(),
+        birth_month,
+        birth_day
+    );
+
+    currentDate.setHours(0,0,0,0,);
+    birthDayDate.setHours(0,0,0,0);
+
+    if(birthDayDate.getTime() === currentDate.getTime()){
+        birthday_timer.innerText = "Vandaag is mijn verjaardag";
+        return;
+    }else if (birthDayDate < currentDate){
+        birthDayDate.setFullYear(currentDate.getFullYear() + 1);
+    }
+
+    let BDDifference = birthDayDate - currentDate;
+    let daysUntilBD = Math.ceil(BDDifference / (1000 * 60 * 60 * 24));
+
+    if (daysUntilBD === 1){
+        birthday_timer.innerText = "Nog " + daysUntilBD + " dag tot mijn verjaardag";
+    }else{
+        birthday_timer.innerText = "Nog " + daysUntilBD + " dagen tot mijn verjaardag";
+    }
+}
+    updateBDCountdown();
+    setInterval(updateBDCountdown, 1000 * 60 * 60 * 24);
