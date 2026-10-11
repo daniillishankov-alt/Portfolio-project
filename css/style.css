@@ -1,3 +1,4 @@
+/*--------- Base Styles & Reset ---------*/
 html, body {
     margin: 0;
     padding: 0;
@@ -22,6 +23,7 @@ body.dark-theme {
     background-image: url("../img/DTBackground.png");
 }
 
+/*--------- Page Layout & Containers ---------*/
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -63,6 +65,7 @@ body.dark-theme p, body.dark-theme li {
     background-color: rgba(30, 40, 50, 0.6);
 }
 
+/*--------- Buttons & Links ---------*/
 .hrefbut {
     font-size: 16px;
     background-color: rgb(255, 165, 0);
@@ -80,13 +83,6 @@ body.dark-theme p, body.dark-theme li {
     color: orange;
 }
 
-.terugbut {
-    position: fixed;
-    top: 15px;
-    left: 20px;
-    z-index: 100;
-}
-
 #theme-toggle {
     padding: 8px 12px;
     background: rgba(100, 184, 237, 0.9);
@@ -98,6 +94,7 @@ body.dark-theme p, body.dark-theme li {
     z-index: 100;
 }
 
+/*--------- Tables ---------*/
 .table-wrapper {
     display: flex;
     justify-content: center;
@@ -124,6 +121,7 @@ th, td {
     font-weight: bold;
 }
 
+/*--------- Bottom Panel / Footer ---------*/
 #bottompanel {
     border-radius: 10px 10px 0 0;
     background-color: rgba(0, 214, 179, 0.6);
@@ -150,34 +148,85 @@ th, td {
     color: rgb(255, 56, 83);
 }
 
+/*--------- Dropdown Menu (Fixed Absolute Positioning) ---------*/
+.dropdown-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
 .dropdown {
-    margin: 10px 0;
-    width: 100%;
-    max-width: 300px;
+    position: relative;
+    width: 280px;
 }
 
 .dropdown-btn {
     width: 100%;
-    background-color: rgba(100, 184, 237, 0.8);
+    background-color: rgba(100, 184, 237, 0.85);
     color: rgb(255, 140, 0);
     border: none;
-    padding: 10px;
+    padding: 12px 15px;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
     font-weight: bold;
+    transition: 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.dropdown-btn:hover {
+    filter: brightness(1.1);
 }
 
 .dropdown-content {
     display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 100%;
+    background: rgba(240, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    z-index: 100;
     flex-direction: column;
-    margin-top: 5px;
+    border: 1px solid rgba(100, 184, 237, 0.5);
+    box-sizing: border-box;
+}
+
+body.dark-theme .dropdown-content {
+    background: rgba(30, 40, 50, 0.95);
+    border-color: rgba(0, 200, 200, 0.4);
 }
 
 .dropdown.open .dropdown-content {
     display: flex;
 }
 
+.dropdown-p {
+    margin: 4px 0 !important;
+    font-size: 0.95rem;
+    background: none !important;
+    color: rgb(0, 140, 140) !important;
+    padding: 6px 8px !important;
+    border-radius: 4px;
+    display: block !important;
+    width: 100%;
+}
+
+body.dark-theme .dropdown-p {
+    color: rgb(0, 200, 200) !important;
+}
+
+.dropdown-p:hover {
+    background: rgba(100, 184, 237, 0.2) !important;
+}
+
+/*--------- Birthday Countdown ---------*/
 #birthday_timer {
     color: rgba(255, 0, 89, 0.9);
     font-size: 1.5rem;
@@ -185,6 +234,7 @@ th, td {
     font-weight: bold;
 }
 
+/*--------- Projects Grid & Cards ---------*/
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -200,9 +250,21 @@ th, td {
     backdrop-filter: blur(5px);
 }
 
+/* Переопределение глобальных стилей p внутри карточки проекта */
+.project-card p {
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin: 8px 0 !important;
+    color: rgb(0, 115, 105);
+}
+
 body.dark-theme .project-card {
     background: rgba(30, 40, 50, 0.7);
     border-color: rgba(0, 200, 200, 0.5);
+}
+
+body.dark-theme .project-card p {
+    color: rgb(0, 200, 200);
 }
 
 .tech-tag {
@@ -216,6 +278,7 @@ body.dark-theme .project-card {
     margin-top: 10px;
 }
 
+/*--------- Filter Buttons ---------*/
 .filter-buttons {
     margin-bottom: 20px;
 }
@@ -236,6 +299,7 @@ body.dark-theme .project-card {
     background: orange;
 }
 
+/*--------- Contact Form ---------*/
 .contact-form {
     max-width: 500px;
     background: rgba(255, 255, 255, 0.6);
@@ -288,7 +352,7 @@ body.dark-theme .form-group label {
     margin-bottom: 15px;
 }
 
-/* Стили для мини-игры на главной */
+/*--------- Mini Game Section (Home) ---------*/
 .mini-game-section {
     margin: 40px auto;
     background: rgba(255, 255, 255, 0.65);
@@ -325,4 +389,10 @@ body.dark-theme .mini-game-section {
     padding: 10px 20px;
     cursor: pointer;
     transition: transform 0.1s ease, background-color 0.2s;
+}
+
+/*--------- Scroll Animation ---------*/
+.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
