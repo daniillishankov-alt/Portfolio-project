@@ -5,7 +5,7 @@ include 'includes/header.php';
 
     <main class="container home-container">
         <h1 id="time_greetings">Welkom!</h1>
-        <p>Ik ben Daniil Lishankov, Software Developer in opleiding aan het Techniek College Rotterdam[cite: 1].</p>
+        <p>Ik ben Daniil Lishankov, Software Developer in opleiding aan het Techniek College Rotterdam.</p>
 
         <!-- Интерактивная мини-игра вместо дублирующих кнопок -->
         <section class="mini-game-section">
