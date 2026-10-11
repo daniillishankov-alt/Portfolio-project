@@ -5,6 +5,11 @@ html, body {
     box-sizing: border-box;
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
+    cursor: url("../img/cursor.png") 16 16, auto;
+}
+
+a, button, .hrefbut, .botmpanel, .filter-btn, .dropdown-btn, input[type="submit"] {
+    cursor: url("../img/cursor-pointer.png") 16 16, pointer !important;
 }
 
 body {
