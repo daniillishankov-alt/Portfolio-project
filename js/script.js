@@ -35,11 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // 4. Таймер до дня рождения (28 января)
+    // 4. Таймер до дня рождения
     const birthday_timer = document.getElementById("birthday_timer");
     if (birthday_timer) {
         const birth_day = 28;
-        const birth_month = 0; // Январь (0-индекс)
+        const birth_month = 1;
 
         function updateBDCountdown() {
             const currentDate = new Date();
