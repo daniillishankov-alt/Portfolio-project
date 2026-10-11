@@ -1,3 +1,7 @@
+<?php
+// Получаем имя текущего файла для подсветки активной ссылки
+$currentPage = basename($_SERVER['PHP_SELF']);
+?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -12,11 +16,13 @@
 <header class="header-bar">
     <button id="theme-toggle" class="theme-btn">Thema</button>
     <nav class="top-nav">
-        <a class="hrefbut" href="index.php">Home</a>
-        <a class="hrefbut" href="projects.php">Projecten</a>
-        <a class="hrefbut" href="opleiding.php">Opleiding</a>
-        <a class="hrefbut" href="talen.php">Talen</a>
-        <a class="hrefbut" href="voorstel.php">Over mij</a>
-        <a class="hrefbut" href="contact.php">Contact</a>
+        <a class="hrefbut <?php echo ($currentPage == 'index.php') ? 'active-nav' : ''; ?>" href="index.php">Home</a>
+        <a class="hrefbut <?php echo ($currentPage == 'projects.php') ? 'active-nav' : ''; ?>" href="projects.php">Projecten</a>
+        <a class="hrefbut <?php echo ($currentPage == 'opleiding.php') ? 'active-nav' : ''; ?>" href="opleiding.php">Opleiding</a>
+        <a class="hrefbut <?php echo ($currentPage == 'talen.php') ? 'active-nav' : ''; ?>" href="talen.php">Talen</a>
+        <a class="hrefbut <?php echo ($currentPage == 'voorstel.php') ? 'active-nav' : ''; ?>" href="voorstel.php">Over mij</a>
+        <a class="hrefbut <?php echo ($currentPage == 'contact.php') ? 'active-nav' : ''; ?>" href="contact.php">Contact</a>
+        
+        <a class="hrefbut" href="https://github.com/daniillishankov-alt" target="_blank" style="background-color: #24292e; color: white;">GitHub ↗</a>
     </nav>
 </header>

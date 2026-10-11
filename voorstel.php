@@ -10,7 +10,7 @@ include 'includes/header.php';
                 <button class="dropdown-btn">Persoonlijke info ▾</button>
                 <div class="dropdown-content">
                     <p class="dropdown-p">- Daniil Lishankov Aleksandrovich</p>
-                    <p class="dropdown-p">- 19 jaar oud</p>
+                    <p class="dropdown-p">- 20 jaar oud</p>
                     <p class="dropdown-p">- Woonachtig in Rotterdam</p>
                     <p class="dropdown-p">- Geboren in Oekraïne</p>
                 </div>

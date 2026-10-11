@@ -4,7 +4,7 @@ include 'includes/header.php';
 ?>
 
     <main class="container">
-        <h1 style="text-align: center; color: orange;">Talen</h1>
+        <h1 style="text-align: center; color: orange;">Spreektalen</h1>
 
         <div class="table-wrapper">
             <table>
